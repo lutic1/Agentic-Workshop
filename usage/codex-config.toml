@@ -1,0 +1,4 @@
+# Codex CLI status line. Add to ~/.codex/config.toml.
+# If you already have a [tui] section, copy only the status_line line into it.
+[tui]
+status_line = ["model-with-reasoning", "project-name", "git-branch", "context-used", "used-tokens", "five-hour-limit", "weekly-limit"]
