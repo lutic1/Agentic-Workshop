@@ -1,0 +1,21 @@
+[project]
+name = "agentic-workshop"
+version = "0.1.0"
+description = "VSF Club Agentic AI Workshop: a support-ticket triage agent built spec-first with BMad."
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.0",
+    "langchain-google-genai>=2.1",
+    "langchain-groq>=0.3",
+    "langchain-mcp-adapters>=0.1",
+    "mcp>=1.9",
+    "mlflow>=3.4",
+    "pydantic>=2.8",
+    "python-dotenv>=1.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

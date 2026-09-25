@@ -1,0 +1,21 @@
+customer_id,name,plan,open_tickets
+C-05,Hooli,Enterprise,4
+C-09,Gringotts,Team,1
+C-12,Acme,Team,0
+C-15,Oscorp,Starter,0
+C-19,Stark Industries,Team,1
+C-27,Cyberdyne,Team,0
+C-31,Dunder Mifflin,Starter,0
+C-33,Initech,Starter,0
+C-40,Aperture,Team,2
+C-44,Vandelay Industries,Starter,0
+C-51,Monsters Inc,Starter,0
+C-58,Umbrella,Team,1
+C-62,Wayne Enterprises,Team,0
+C-66,Massive Dynamic,Enterprise,3
+C-73,Tyrell,Enterprise,1
+C-77,Northwind,Enterprise,2
+C-84,Pied Piper,Team,0
+C-88,Soylent,Enterprise,3
+C-91,Globex,Enterprise,3
+C-95,Wonka Industries,Team,0
