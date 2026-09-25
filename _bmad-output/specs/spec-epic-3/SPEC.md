@@ -54,6 +54,7 @@ Epic 2 gives the workshop a triage agent that decides; nothing yet says how well
 - No network calls beyond model APIs: `valid_schema`, `category_match`, `priority_match`, and `tool_order` run locally against schema, label, and trace data; only the agent's own model call and `rationale_judge`'s Groq call cross the network.
 - `eval/latest_report.json` is the only new file this epic writes outside MLflow's own store.
 - Unattended escalation approval applies only inside the eval run — a normal `uv run python run_agent.py` invocation still pauses for a person's yes/no, unchanged from Epic 2's CAP-5.
+- Each ticket's prediction runs inside a single MLflow trace (e.g. `mlflow.trace` on the predict function). An approved escalation resumes the agent in a second call; without this, that second call would autolog as a separate trace that CAP-5's `tool_order` scorer can't see.
 
 ## Non-goals
 
