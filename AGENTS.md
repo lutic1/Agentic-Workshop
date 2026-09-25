@@ -9,6 +9,7 @@ A support-ticket triage agent built spec-first with BMad: a LangChain agent call
 ## Commands
 
 - Install: `uv sync`
+- Install BMad for one tool: `npx bmad-method@6.12.0 install --directory . --modules bmm --tools <tool id> --user-name <first name> --yes`. Tool ids: `claude-code`, `codex`, `github-copilot`, `cursor`, `gemini`. It needs Node 20.12 or newer, and the tool must be restarted before its BMad skills appear.
 - Tests: `uv run pytest`
 - Load the data into `app.db`: `uv run python load_seed.py` (built in Epic 1)
 - Run the agent on one ticket: `uv run python run_agent.py T-1042` (built in Epic 2)

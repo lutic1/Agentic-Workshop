@@ -14,7 +14,29 @@ Then reopen your agent inside the new `Agentic-Workshop` folder and ask:
 
 If the answer ends with “— VSF”, your tool is reading `AGENTS.md` and you're ready.
 
-You need `uv`, `git`, a GitHub account and a free Gemini API key. Copy `.env.example` to `.env` and paste your keys there. A Groq key is the backup for when Gemini's free tier runs out.
+You need `uv`, `git`, Node 20.12 or newer, a GitHub account and a free Gemini API key. Copy `.env.example` to `.env` and paste your keys there. A Groq key is the backup for when Gemini's free tier runs out.
+
+## Install BMad
+
+BMad is a set of skills your agent loads: specs, builds, reviews and five personas. Everyone installs it for their own tool, with their own name, so the personas greet you. Ask your agent:
+
+> Install BMad for Claude Code. My first name is Priya.
+
+It runs this, with your tool's id and your name:
+
+```
+npx bmad-method@6.12.0 install --directory . --modules bmm --tools claude-code --user-name Priya --yes
+```
+
+| Your tool | Tool id | Skills land in | Call a skill |
+|---|---|---|---|
+| Claude Code | `claude-code` | `.claude/skills/` | `/bmad-help` |
+| Codex | `codex` | `.agents/skills/` | `$bmad-help` |
+| GitHub Copilot CLI | `github-copilot` | `.agents/skills/`, `.github/agents/` | “Use the bmad-help skill” |
+| Cursor | `cursor` | `.agents/skills/` | “Use the bmad-help skill” |
+| Gemini CLI | `gemini` | `.agents/skills/` | “Use the bmad-help skill” |
+
+Then quit and reopen your agent, because skills load when it starts, and call bmad-help the way your tool does: `/bmad-help What should I run first?` in Claude Code. The install is git-ignored: it lives on your laptop, not in the repo, so switching to a stage branch never touches it.
 
 ## What you build on Saturday
 
@@ -46,4 +68,4 @@ Each block has a finished checkpoint. Ask your agent to switch you to it:
 - `eval/labelled_tickets.csv`: 20 tickets labelled by hand, including T-1099, which tries a prompt injection.
 - `mcp/triage_server.py`: the MCP server with `get_ticket` and `get_customer_history`.
 - `run_agent.py`: runs the agent on one ticket, with MLflow tracing on.
-- `_bmad/`, `.claude/skills/`, `.agents/skills/`: BMad 6.12, installed for Claude Code, Codex, Copilot and Cursor.
+- `_bmad-output/specs/`: the specs and stories for each epic, written with BMad.
