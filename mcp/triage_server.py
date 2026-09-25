@@ -7,7 +7,7 @@ from mcp.server.fastmcp import FastMCP
 
 DB_PATH = Path(__file__).resolve().parent.parent / "app.db"
 
-server = FastMCP("triage")
+server = FastMCP("triage", log_level="WARNING")
 
 
 def _query(sql: str, *params: str) -> list[dict]:
