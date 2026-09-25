@@ -38,4 +38,5 @@ A support-ticket triage agent built spec-first with BMad: a LangChain agent call
 - Each case lives in `cases/expense/` or `cases/leads/`. Work inside your case's folder, and write your intent there as `cases/<case>/INTENT.md`.
 - `BRIEF.md`, `POLICY.md`, `ICP.md`, `seed/` and `eval/` inside a case are read-only.
 - Keep Saturday's triage code working; don't change it for Sunday's case.
+- Your case's eval reads `cases/<case>/eval/labelled.csv`, the way Saturday's reads `eval/labelled_tickets.csv`; don't move the labels into an MLflow dataset.
 - The approval gate is not optional: payouts over $500 (expense) and sending a reply (leads) wait for a person's yes.
