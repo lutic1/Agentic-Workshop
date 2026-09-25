@@ -38,6 +38,23 @@ npx bmad-method@6.12.0 install --directory . --modules bmm --tools claude-code -
 
 Then quit and reopen your agent, because skills load when it starts, and call bmad-help the way your tool does: `/bmad-help What should I run first?` in Claude Code. The install is git-ignored: it lives on your laptop, not in the repo, so switching to a stage branch never touches it.
 
+## Skills that come with the repo
+
+Eight best-practice skills from the teams behind the stack are committed in `.claude/skills/` (Claude Code) and `.agents/skills/` (every other tool). Your agent loads one when a task matches it; you don't call them yourself.
+
+| Skill | From | Helps with |
+|---|---|---|
+| `langchain-fundamentals` | LangChain | `create_agent`, tools and the agent loop (Epic 2) |
+| `langchain-middleware` | LangChain | The approval gate and structured output (Epic 2) |
+| `mcp-builder` | Anthropic | MCP servers like `mcp/triage_server.py`, and Sunday's case server |
+| `instrumenting-with-mlflow-tracing` | MLflow | Tracing the agent (Epics 2 and 3) |
+| `retrieving-mlflow-traces` | MLflow | Finding traces by ID, status or tag |
+| `analyzing-mlflow-trace` | MLflow | Working out why one run went wrong |
+| `build-a-scorer` | MLflow | Picking code checks or an LLM judge for each criterion (Epic 3, Sunday) |
+| `searching-mlflow-docs` | MLflow | Looking up current MLflow APIs |
+
+They were added with `npx skills add <repo> --skill <name> --agent claude-code codex --copy`, and `skills-lock.json` records where each one came from; `npx skills update --project` refreshes them. Licenses are in `THIRD_PARTY_LICENSES`. For Sunday's take-home, `npx skills add vercel-labs/agent-skills --skill deploy-to-vercel` adds Vercel's deploy skill.
+
 ## What you build on Saturday
 
 | Epic | What it adds | Spec |
@@ -69,3 +86,4 @@ Each block has a finished checkpoint. Ask your agent to switch you to it:
 - `mcp/triage_server.py`: the MCP server with `get_ticket` and `get_customer_history`.
 - `run_agent.py`: runs the agent on one ticket, with MLflow tracing on.
 - `_bmad-output/specs/`: the specs and stories for each epic, written with BMad.
+- `.claude/skills/`, `.agents/skills/`, `skills-lock.json`: the eight skills above. BMad's skills land beside them when you install it, git-ignored.

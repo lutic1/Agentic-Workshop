@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "analyzing-mlflow-trace": {
+      "source": "mlflow/skills",
+      "sourceType": "github",
+      "skillPath": "analyze-mlflow-trace/SKILL.md",
+      "computedHash": "b082e459517796c4db4a604d5587e63ca1a14faf971c5d23652c335e1febecb1"
+    },
+    "build-a-scorer": {
+      "source": "mlflow/skills",
+      "sourceType": "github",
+      "skillPath": "build-a-scorer/SKILL.md",
+      "computedHash": "0fec2ef36e88d6a2abb8332d6d4353002f3f71a930b378ee93e34cb57f856c64"
+    },
+    "instrumenting-with-mlflow-tracing": {
+      "source": "mlflow/skills",
+      "sourceType": "github",
+      "skillPath": "instrumenting-with-mlflow-tracing/SKILL.md",
+      "computedHash": "32d9e3e53d52096e76eb26fb635fc620d56854774678cebe4e4cf1759b61efa4"
+    },
+    "langchain-fundamentals": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "skillPath": "config/skills/langchain-fundamentals/SKILL.md",
+      "computedHash": "5a1ded1b185ed95aab2b795f6134ce1ea9c19dddc5d5c8f291b31c0db4f0e379"
+    },
+    "langchain-middleware": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "skillPath": "config/skills/langchain-middleware/SKILL.md",
+      "computedHash": "f8b6897ba1f027d56ff9fffa72d4d27d8e048232fe1e1c13e219df98969d55b0"
+    },
+    "mcp-builder": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mcp-builder/SKILL.md",
+      "computedHash": "826e46adf81e1372282e205c34e1a2ee876e72148007726e4a2512599d2fef7b"
+    },
+    "retrieving-mlflow-traces": {
+      "source": "mlflow/skills",
+      "sourceType": "github",
+      "skillPath": "retrieving-mlflow-traces/SKILL.md",
+      "computedHash": "ec202398a25511ddac389ab111a536d3d3a7858350b25ca00f7198c01224e033"
+    },
+    "searching-mlflow-docs": {
+      "source": "mlflow/skills",
+      "sourceType": "github",
+      "skillPath": "searching-mlflow-docs/SKILL.md",
+      "computedHash": "b493bd3becb75a2bed6a6cb385700b25fe5ca0656a0c505756af4873d4c237dd"
+    }
+  }
+}
