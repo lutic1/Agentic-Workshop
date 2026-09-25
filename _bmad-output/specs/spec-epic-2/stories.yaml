@@ -1,0 +1,13 @@
+- id: "1"
+  title: The triage agent
+  description: >-
+    Build the create_agent-based agent covering CAP-1 through CAP-4 and CAP-6:
+    the Gemini/Groq provider switch, tool-grounded lookup via mcp/triage_server.py,
+    TRIAGE_POLICY.md-driven structured output with retry-once-then-error, and
+    ignoring instructions embedded in ticket text.
+- id: "2"
+  title: Human-gated escalation
+  description: >-
+    Add the escalate_to_human tool and LangChain human-in-the-loop approval gate
+    (CAP-5): the policy's P1+Enterprise rule pauses the run for a terminal yes/no,
+    and nothing escalates without a yes.
