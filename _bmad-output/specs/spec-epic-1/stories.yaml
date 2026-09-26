@@ -1,0 +1,12 @@
+- id: "1"
+  title: Triage decision schema
+  description: >-
+    Build the triage decision schema (CAP-1): category, priority P1-P4, route
+    and a one-sentence rationale, with anything else rejected by an error that
+    names the offending field.
+- id: "2"
+  title: Seed loader
+  description: >-
+    Build load_seed.py (CAP-2): load seed/tickets.csv and seed/customers.csv into
+    app.db as tables tickets and customers, idempotently, keeping the table and
+    column names mcp/triage_server.py reads.
